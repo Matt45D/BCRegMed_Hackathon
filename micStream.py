@@ -9,6 +9,8 @@ def record():
     RECORD_SECONDS = 3
     WAVE_OUTPUT_FILENAME = "file.wav"
 
+    print("output stuff")
+
     audio = pyaudio.PyAudio()
 
     # start Recording
@@ -20,7 +22,9 @@ def record():
 
     for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
         data = stream.read(CHUNK)
+        print(data)
         frames.append(data)
+        print(data)
     print("finished recording")
 
 
