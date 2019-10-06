@@ -59,9 +59,12 @@ def detect_intent_stream(project_id, session_id, audio_file_path,
     query_result = response.query_result
 
     print('=' * 20)
-    print('Query text: {}'.format(query_result.query_text))
-    print('Detected intent: {} (confidence: {})\n'.format(
-        query_result.intent.display_name,
-        query_result.intent_detection_confidence))
-    print('Fulfillment text: {}\n'.format(
-        query_result.fulfillment_text))
+    # print('Query text: {}'.format(query_result.query_text))
+    # print('Detected intent: {} (confidence: {})\n'.format(
+    #     query_result.intent.display_name,
+    #     query_result.intent_detection_confidence))
+    # print('Fulfillment text: {}\n'.format(
+    #     query_result.fulfillment_text))
+    # print(query_result)
+    print("Intent: " + str(query_result.intent.display_name))
+    print("Direction " + str(query_result.parameters.fields["Direction"]))

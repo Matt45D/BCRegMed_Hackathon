@@ -6,5 +6,8 @@ sessionID = "2"
 audiofilepath = "file.wav"
 languageCode = "en"
 
-record()
-detect_intent_stream(projectID, sessionID, audiofilepath, languageCode)
+response = 1
+while response:
+    record()
+    detect_intent_stream(projectID, sessionID, audiofilepath, languageCode)
+    response = input("Press 1 to add another command, and 0 to stop")
