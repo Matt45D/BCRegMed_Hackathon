@@ -14,5 +14,5 @@ response = 1
 while response:
     print("2")
     micRecordThread = threading.Thread(target=record())
-    dialogConnectionThread = threading.Thread(target=detect_intent_stream, args=(projectID, sessionID, audiofilepath, languageCode))
+    dialogConnectionThread = threading.Thread(target=detect_intent_stream(), args=(projectID, sessionID, audiofilepath, languageCode))
     response = input("Press 1 to add another command, and 0 to stop")
